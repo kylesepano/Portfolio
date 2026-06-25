@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
-import { personalInfo } from '../data/portfolioData'
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { personalInfo } from "../data/portfolioData";
 
-const bounce = { type: 'spring', stiffness: 300, damping: 15 }
+const bounce = { type: "spring", stiffness: 300, damping: 15 };
 
 export default function Hero() {
   return (
@@ -31,9 +31,9 @@ export default function Hero() {
           transition={{ ...bounce, delay: 0.2 }}
           className="text-6xl md:text-8xl font-black leading-none mb-4"
         >
-          Hi, I'm{' '}
+          Hi, I'm{" "}
           <span className="bg-gradient-to-r from-violet-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent">
-            {personalInfo.name.split(' ')[0]}
+            {personalInfo.name.split(" ")[0]}
           </span>
         </motion.h1>
 
@@ -61,7 +61,11 @@ export default function Hero() {
           transition={{ ...bounce, delay: 0.65 }}
           className="flex flex-wrap items-center justify-center gap-4 mb-12"
         >
-          <motion.div whileHover={{ scale: 1.08, y: -3 }} whileTap={{ scale: 0.95 }} transition={bounce}>
+          <motion.div
+            whileHover={{ scale: 1.08, y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            transition={bounce}
+          >
             <Link
               to="/projects"
               className="px-8 py-4 rounded-2xl font-semibold text-white
@@ -71,7 +75,11 @@ export default function Hero() {
               View My Work
             </Link>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.08, y: -3 }} whileTap={{ scale: 0.95 }} transition={bounce}>
+          <motion.div
+            whileHover={{ scale: 1.08, y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            transition={bounce}
+          >
             <Link
               to="/contact"
               className="px-8 py-4 rounded-2xl font-semibold text-gray-300
@@ -117,10 +125,13 @@ export default function Hero() {
         transition={{ repeat: Infinity, duration: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <Link to="/about" className="text-gray-500 hover:text-violet-400 transition">
+        <Link
+          to="/about"
+          className="text-gray-500 hover:text-violet-400 transition"
+        >
           <ArrowDown size={24} />
         </Link>
       </motion.div>
     </section>
-  )
+  );
 }

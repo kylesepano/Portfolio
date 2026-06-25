@@ -1,28 +1,31 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Send, Mail, MapPin, CheckCircle, AlertCircle } from 'lucide-react'
-import { personalInfo } from '../data/portfolioData'
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Send, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-react";
+import { personalInfo } from "../data/portfolioData";
 
-const bounce = { type: 'spring', stiffness: 300, damping: 15 }
+const bounce = { type: "spring", stiffness: 300, damping: 15 };
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState('idle') // idle | sending | success | error
-  const [errorMsg, setErrorMsg] = useState('')
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setStatus('sending')
-    setErrorMsg('')
+    e.preventDefault();
+    setStatus("sending");
+    setErrorMsg("");
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
           access_key: import.meta.env.VITE_WEB3FORMS_KEY,
           name: form.name,
@@ -30,23 +33,23 @@ export default function Contact() {
           message: form.message,
           subject: `Portfolio message from ${form.name}`,
         }),
-      })
+      });
 
-      const data = await response.json()
+      const data = await response.json();
 
       if (data.success) {
-        setStatus('success')
-        setForm({ name: '', email: '', message: '' })
-        setTimeout(() => setStatus('idle'), 4000)
+        setStatus("success");
+        setForm({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 4000);
       } else {
-        setStatus('error')
-        setErrorMsg(data.message || 'Something went wrong. Please try again.')
+        setStatus("error");
+        setErrorMsg(data.message || "Something went wrong. Please try again.");
       }
     } catch {
-      setStatus('error')
-      setErrorMsg('Network error. Check your connection and try again.')
+      setStatus("error");
+      setErrorMsg("Network error. Check your connection and try again.");
     }
-  }
+  };
 
   return (
     <section className="py-24 px-6">
@@ -58,7 +61,9 @@ export default function Contact() {
           transition={bounce}
           className="text-center mb-16"
         >
-          <span className="text-violet-400 text-sm font-semibold tracking-widest uppercase">Contact</span>
+          <span className="text-violet-400 text-sm font-semibold tracking-widest uppercase">
+            Contact
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2">
             Let's <span className="text-violet-400">Talk</span>
           </h2>
@@ -73,11 +78,16 @@ export default function Contact() {
             className="space-y-6"
           >
             <p className="text-gray-400 text-lg leading-relaxed">
-              Have a project in mind or just want to say hi? Drop me a message and I'll get back to you soon!
+              Have a project in mind or just want to say hi? Drop me a message
+              and I'll get back to you soon!
             </p>
             {[
-              { icon: Mail, label: 'Email', value: personalInfo.email },
-              { icon: MapPin, label: 'Location', value: 'Cagayan de Oro, Philippines' },
+              { icon: Mail, label: "Email", value: personalInfo.email },
+              {
+                icon: MapPin,
+                label: "Location",
+                value: "Cagayan de Oro, Philippines",
+              },
             ].map(({ icon: Icon, label, value }, i) => (
               <motion.div
                 key={label}
@@ -141,7 +151,7 @@ export default function Contact() {
                          focus:border-violet-500/50 focus:bg-violet-500/5 transition"
             />
 
-            {status === 'error' && (
+            {status === "error" && (
               <div className="flex items-center gap-2 text-red-400 text-sm px-2">
                 <AlertCircle size={16} />
                 {errorMsg}
@@ -150,22 +160,33 @@ export default function Contact() {
 
             <motion.button
               type="submit"
-              disabled={status === 'sending'}
-              whileHover={{ scale: status === 'sending' ? 1 : 1.05, y: status === 'sending' ? 0 : -2 }}
-              whileTap={{ scale: status === 'sending' ? 1 : 0.95 }}
+              disabled={status === "sending"}
+              whileHover={{
+                scale: status === "sending" ? 1 : 1.05,
+                y: status === "sending" ? 0 : -2,
+              }}
+              whileTap={{ scale: status === "sending" ? 1 : 0.95 }}
               transition={bounce}
               className="w-full flex items-center justify-center gap-2 px-8 py-4
                          font-semibold rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500
                          shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 transition-shadow
                          disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {status === 'sending' && 'Sending...'}
-              {status === 'success' && <><CheckCircle size={20} /> Message Sent!</>}
-              {(status === 'idle' || status === 'error') && <><Send size={20} /> Send Message</>}
+              {status === "sending" && "Sending..."}
+              {status === "success" && (
+                <>
+                  <CheckCircle size={20} /> Message Sent!
+                </>
+              )}
+              {(status === "idle" || status === "error") && (
+                <>
+                  <Send size={20} /> Send Message
+                </>
+              )}
             </motion.button>
           </motion.form>
         </div>
       </div>
     </section>
-  )
+  );
 }

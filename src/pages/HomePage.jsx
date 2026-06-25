@@ -1,5 +1,5 @@
-import Hero from '../components/Hero'
-import Skills from '../components/Skills'
+import Hero from "../components/Hero";
+import Skills from "../components/Skills";
 
 export default function HomePage() {
   return (
@@ -7,5 +7,5 @@ export default function HomePage() {
       <Hero />
       <Skills />
     </>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
-import { ExternalLink, Github } from 'lucide-react'
-import { projects } from '../data/portfolioData'
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import { projects } from "../data/portfolioData";
 
-const bounce = { type: 'spring', stiffness: 300, damping: 15 }
+const bounce = { type: "spring", stiffness: 300, damping: 15 };
 
 export default function Projects() {
   return (
@@ -15,9 +15,11 @@ export default function Projects() {
           transition={bounce}
           className="text-center mb-16"
         >
-          <span className="text-pink-400 text-sm font-semibold tracking-widest uppercase">Portfolio</span>
+          <span className="text-blue-400 text-sm font-semibold tracking-widest uppercase">
+            Portfolio
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2">
-            My <span className="text-pink-400">Projects</span>
+            My <span className="text-blue-400">Projects</span>
           </h2>
         </motion.div>
 
@@ -38,17 +40,24 @@ export default function Projects() {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-40
-                                group-hover:opacity-60 transition-opacity`} />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-40
+                                group-hover:opacity-60 transition-opacity`}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-violet-300 transition">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">{project.description}</p>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-2.5 py-0.5 text-xs bg-violet-500/20 text-violet-300 rounded-full">
+                    <span
+                      key={tag}
+                      className="px-2.5 py-0.5 text-xs bg-violet-500/20 text-violet-300 rounded-full"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -86,5 +95,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

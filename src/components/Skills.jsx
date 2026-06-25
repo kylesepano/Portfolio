@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
-import { skills } from '../data/portfolioData'
+import { motion } from "framer-motion";
+import { skills } from "../data/portfolioData";
 
-const bounce = { type: 'spring', stiffness: 300, damping: 15 }
+const bounce = { type: "spring", stiffness: 300, damping: 15 };
 
 export default function Skills() {
   return (
@@ -14,7 +14,9 @@ export default function Skills() {
           transition={bounce}
           className="text-center mb-16"
         >
-          <span className="text-cyan-400 text-sm font-semibold tracking-widest uppercase">My Skills</span>
+          <span className="text-cyan-400 text-sm font-semibold tracking-widest uppercase">
+            My Skills
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2">
             What I <span className="text-cyan-400">Know</span>
           </h2>
@@ -40,7 +42,11 @@ export default function Skills() {
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.3 + i * 0.07, ease: 'easeOut' }}
+                  transition={{
+                    duration: 1,
+                    delay: 0.3 + i * 0.07,
+                    ease: "easeOut",
+                  }}
                   className="h-full bg-gradient-to-r from-violet-500 to-cyan-400 rounded-full"
                 />
               </div>
@@ -50,5 +56,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }

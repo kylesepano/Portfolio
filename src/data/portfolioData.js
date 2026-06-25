@@ -24,7 +24,8 @@ export const projects = [
     id: 1,
     title: "E-Commerce Platform",
     description: "Full-stack store with cart, payments, and admin dashboard.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
     liveUrl: "https://example.com",
     githubUrl: "https://github.com",
     tags: ["React", "Node.js", "Stripe"],
@@ -34,7 +35,8 @@ export const projects = [
     id: 2,
     title: "Task Manager App",
     description: "Real-time collaborative task board with drag-and-drop.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
     liveUrl: "https://example.com",
     githubUrl: "https://github.com",
     tags: ["React", "Firebase", "Tailwind"],
@@ -42,13 +44,13 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Weather Dashboard",
+    title: "Klima Weather App",
     description: "Beautiful weather app with animated icons and forecasts.",
-    image: "https://images.unsplash.com/photo-1504608524841-42fe6f933b4?w=600&h=400&fit=crop",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    image: "klima.png",
+    liveUrl: "https://klimalala.vercel.app/",
+    githubUrl: "https://github.com/kylesepano/Klima",
     tags: ["React", "API", "Chart.js"],
-    color: "from-pink-500 to-rose-600",
+    color: "from-gray-100 to-white-600",
   },
 ];
 

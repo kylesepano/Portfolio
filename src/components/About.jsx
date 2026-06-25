@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
-import { personalInfo } from '../data/portfolioData'
+import { motion } from "framer-motion";
+import { personalInfo } from "../data/portfolioData";
 
-const bounce = { type: 'spring', stiffness: 300, damping: 15 }
+const bounce = { type: "spring", stiffness: 300, damping: 15 };
 
 export default function About() {
   return (
@@ -14,7 +14,9 @@ export default function About() {
           transition={bounce}
           className="text-center mb-16"
         >
-          <span className="text-violet-400 text-sm font-semibold tracking-widest uppercase">About Me</span>
+          <span className="text-violet-400 text-sm font-semibold tracking-widest uppercase">
+            About Me
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2">
             Who I <span className="text-violet-400">Am</span>
           </h2>
@@ -29,8 +31,10 @@ export default function About() {
             className="relative flex justify-center"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-600 to-cyan-500
-                              rounded-3xl blur-xl opacity-40 scale-105" />
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-violet-600 to-cyan-500
+                              rounded-3xl blur-xl opacity-40 scale-105"
+              />
               <motion.div
                 whileHover={{ scale: 1.05, rotate: 2 }}
                 transition={bounce}
@@ -44,7 +48,11 @@ export default function About() {
               </motion.div>
               <motion.div
                 animate={{ y: [0, -8, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
                 className="absolute -bottom-4 -right-4 px-4 py-2 bg-violet-600 rounded-2xl
                            text-sm font-bold shadow-lg shadow-violet-500/40"
               >
@@ -61,18 +69,23 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-gray-300 text-lg leading-relaxed">
-              Hey! I'm <span className="text-violet-400 font-semibold">{personalInfo.name}</span>,
-              a passionate developer who loves turning ideas into interactive digital experiences.
+              Hey! I'm{" "}
+              <span className="text-violet-400 font-semibold">
+                {personalInfo.name}
+              </span>
+              , a passionate developer who loves turning ideas into interactive
+              digital experiences.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              With a strong foundation in modern web technologies, I focus on building
-              applications that are not only functional but also visually stunning.
+              With a strong foundation in modern web technologies, I focus on
+              building applications that are not only functional but also
+              visually stunning.
             </p>
             <div className="grid grid-cols-3 gap-4 pt-4">
               {[
-                { num: '20+', label: 'Projects' },
-                { num: '4+', label: 'Years' },
-                { num: '10+', label: 'Clients' },
+                { num: "20+", label: "Projects" },
+                { num: "4+", label: "Years" },
+                { num: "10+", label: "Clients" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -84,7 +97,9 @@ export default function About() {
                   className="text-center p-4 bg-white/5 border border-white/10 rounded-2xl
                              hover:border-violet-500/40 transition cursor-default"
                 >
-                  <div className="text-2xl font-bold text-violet-400">{stat.num}</div>
+                  <div className="text-2xl font-bold text-violet-400">
+                    {stat.num}
+                  </div>
                   <div className="text-xs text-gray-500 mt-1">{stat.label}</div>
                 </motion.div>
               ))}
@@ -93,5 +108,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Heart } from 'lucide-react'
-import { personalInfo } from '../data/portfolioData'
+import { Heart } from "lucide-react";
+import { personalInfo } from "../data/portfolioData";
 
 export default function Footer() {
   return (
@@ -8,8 +8,10 @@ export default function Footer() {
         <p className="text-gray-500 text-sm flex items-center gap-1">
           Built by {personalInfo.name}
         </p>
-        <p className="text-gray-600 text-sm">© {new Date().getFullYear()} All rights reserved.</p>
+        <p className="text-gray-600 text-sm">
+          © {new Date().getFullYear()} All rights reserved.
+        </p>
       </div>
     </footer>
-  )
+  );
 }

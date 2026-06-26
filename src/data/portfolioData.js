@@ -23,22 +23,21 @@ export const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    description: "Full-stack store with cart, payments, and admin dashboard.",
+    description: "Full-stack store with cart, and admin dashboard.",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
     liveUrl: "https://example.com",
     githubUrl: "https://github.com",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["React", "GCash", "Laravel"],
     color: "from-violet-500 to-purple-600",
   },
   {
     id: 2,
     title: "Task Manager App",
     description: "Real-time collaborative task board with drag-and-drop.",
-    image:
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    image: "gama.png",
+    liveUrl: "https://gama-e18cb.web.app/dashboard",
+    githubUrl: "https://github.com/kylesepano/gama",
     tags: ["React", "Firebase", "Tailwind"],
     color: "from-cyan-500 to-blue-600",
   },

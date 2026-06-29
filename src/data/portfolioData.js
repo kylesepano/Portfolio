@@ -24,12 +24,11 @@ export const projects = [
     id: 1,
     title: "E-Commerce Platform",
     description: "Full-stack store with cart, and admin dashboard.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    image: "tindahan.png",
+    liveUrl: "https://tindahanniczepano.onrender.com",
+    githubUrl: "https://github.com/kylesepano/tindahan",
     tags: ["React", "GCash", "Laravel"],
-    color: "from-violet-500 to-purple-600",
+    color: "from-violet-100 to-purple-600",
   },
   {
     id: 2,
@@ -39,7 +38,7 @@ export const projects = [
     liveUrl: "https://gama-e18cb.web.app/dashboard",
     githubUrl: "https://github.com/kylesepano/gama",
     tags: ["React", "Firebase", "Tailwind"],
-    color: "from-cyan-500 to-blue-600",
+    color: "from-green-100 to-blue-600",
   },
   {
     id: 3,

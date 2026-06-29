@@ -22,7 +22,7 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Tindahan E-Commerce Platform",
     description: "Full-stack store with cart, and admin dashboard.",
     image: "tindahan.png",
     liveUrl: "https://tindahanniczepano.onrender.com",
@@ -32,7 +32,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Task Manager App",
+    title: "Gama Task Manager App",
     description: "Real-time collaborative task board with drag-and-drop.",
     image: "gama.png",
     liveUrl: "https://gama-e18cb.web.app/dashboard",

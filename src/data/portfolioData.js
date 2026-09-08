@@ -24,7 +24,7 @@ export const projects = [
     id: 1,
     title: "Dinero - Money Tracker",
     description: "Your money. Your space.",
-    image: "dinero.svg",
+    image: "dinero.png",
     liveUrl: "https://dinero-ph.vercel.app",
     githubUrl: "https://github.com/kylesepano/dinero",
     tags: ["React", "Supabase", "Vercel"],

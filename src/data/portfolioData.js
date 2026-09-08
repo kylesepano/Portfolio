@@ -22,12 +22,12 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Tindahan E-Commerce Platform",
-    description: "Full-stack store with cart, and admin dashboard.",
-    image: "tindahan.png",
-    liveUrl: "https://tindahanniczepano.onrender.com",
-    githubUrl: "https://github.com/kylesepano/tindahan",
-    tags: ["React", "GCash", "Laravel"],
+    title: "Dinero - Money Tracker",
+    description: "Your money. Your space.",
+    image: "dinero.svg",
+    liveUrl: "https://dinero-ph.vercel.app",
+    githubUrl: "https://github.com/kylesepano/dinero",
+    tags: ["React", "Supabase", "Vercel"],
     color: "from-violet-100 to-purple-600",
   },
   {
